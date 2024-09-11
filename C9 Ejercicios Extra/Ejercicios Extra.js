@@ -14,7 +14,38 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+  var objetoRetorn = {};
+  var propiedad = "";
+
+  for (var index = 0; index < string.length; index++) {
+    propiedad = string[index];
+    if (objetoRetorn.hasOwnProperty(propiedad)) {
+      objetoRetorn[propiedad] = objetoRetorn[propiedad]+1;
+    } else {
+      objetoRetorn[propiedad] = 1;
+    }
+  }
+  ordenarObjeto(objetoRetorn[propiedad], objetoRetorn);
+  return objetoRetorn;
 }
+
+function ordenarObjeto(sortBy, list) {
+  list.sort((a, b) => {
+     if (a[sortBy] < b[sortBy]) {
+
+        return -1;
+     }
+     
+     if (a[sortBy] > b[sortBy]) {
+        return 1;
+     }
+     return 0;
+  });
+  return list;
+}
+
+console.log(numberOfCharacters("adsjfdsfsfjsdjfhacabcsbajda"));
+
 
 function capToFront(string) {
   // Recibes un string con algunas letras en mayúscula y otras en minúscula.

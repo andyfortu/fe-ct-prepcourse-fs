@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #bfbbbf;
+    color: #14381e;
+    margin: 20px;
+  }
+
+div {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: rgb(147, 176, 177);
+text-align: center;
+border-radius: 10px;
+margin: auto;
+border: 1px solid rgb(50, 49, 49);
+padding: 3px;
+}
+
+div:hover {
+background-color: slategray;
+transition: 2s;
+}
+
+#gato {
+width: fit-content;
+padding: 1px;
+line-height: 8px;
+}
+
+h3 {font-style: oblique;}
+
+#principal {
+text-decoration: underline solid #14381e;
+}
+
+button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #14381e;
+  background-color: rgb(188, 154, 160);
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(235, 88, 88);
+}
